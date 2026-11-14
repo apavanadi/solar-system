@@ -116,9 +116,11 @@ jobs:
 
         - name: Docker Push
           uses: docker/build-push-action@v7
-           with:
+          with:
             context: .
-            push: true
+            push: false
             tags: ${{ vars.DOCKERHUB_USERNAME }}/solar-system:${{ github.sha }}
+
+  
           
 
